@@ -62,5 +62,9 @@ extension UsersListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Selected User: \(viewModel.users[indexPath.row].name)")
+        let selectedUser = viewModel.users[indexPath.row]
+        let detailViewModel = UserDetailViewModel(user: selectedUser)
+            let detailVC = UserDetailVC(viewModel: detailViewModel)
+            navigationController?.pushViewController(detailVC, animated: true)
     }
 }

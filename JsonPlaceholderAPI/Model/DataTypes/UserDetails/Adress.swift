@@ -13,4 +13,9 @@ struct Address: Codable {
     let city: String
     let zipcode: String
     let geo: Geo
+    
+    // Computed property to format the address
+        var fullAddress: String {
+            return "\(street), \(suite), \(city), \(zipcode)"
+        }
 }
