@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812CF8212C88D5D1007D3B61 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812CF8202C88D5D1007D3B61 /* SearchViewModel.swift */; };
+		812CF8232C88D658007D3B61 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812CF8222C88D658007D3B61 /* SearchView.swift */; };
 		81A0D0242C877BDF00749635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0D0232C877BDF00749635 /* AppDelegate.swift */; };
 		81A0D0262C877BDF00749635 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0D0252C877BDF00749635 /* SceneDelegate.swift */; };
 		81A0D0282C877BDF00749635 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0D0272C877BDF00749635 /* TabBarController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		812CF8202C88D5D1007D3B61 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		812CF8222C88D658007D3B61 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		81A0D0202C877BDF00749635 /* JsonPlaceholderAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonPlaceholderAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A0D0232C877BDF00749635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A0D0252C877BDF00749635 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 				81A0D0542C8788BD00749635 /* UserViewModel.swift */,
 				81A0D0582C883B1700749635 /* UserListViewModel.swift */,
 				81A0D05A2C888F4700749635 /* UserDetailViewModel.swift */,
+				812CF8202C88D5D1007D3B61 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			children = (
 				81A0D0562C883A7100749635 /* UserCell.swift */,
 				81A0D05C2C888FD700749635 /* UserDetailView.swift */,
+				812CF8222C88D658007D3B61 /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,10 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812CF8232C88D658007D3B61 /* SearchView.swift in Sources */,
 				81A0D0282C877BDF00749635 /* TabBarController.swift in Sources */,
 				81A0D03C2C877DB600749635 /* SearchVC.swift in Sources */,
 				81A0D05B2C888F4700749635 /* UserDetailViewModel.swift in Sources */,
 				81A0D0552C8788BD00749635 /* UserViewModel.swift in Sources */,
+				812CF8212C88D5D1007D3B61 /* SearchViewModel.swift in Sources */,
 				81A0D05F2C88900400749635 /* UserDetailVC.swift in Sources */,
 				81A0D0472C87815B00749635 /* Company.swift in Sources */,
 				81A0D0592C883B1700749635 /* UserListViewModel.swift in Sources */,
