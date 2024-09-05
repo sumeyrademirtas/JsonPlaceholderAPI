@@ -8,7 +8,6 @@
 import UIKit
 
 class SearchVC: UIViewController {
-    
     // SearchView: Kullanıcı arayüzünü oluşturacak olan view'i tanımlıyoruz
     private let searchView = SearchView()
 
@@ -24,7 +23,7 @@ class SearchVC: UIViewController {
     private func setupUI() {
         view.addSubview(searchView)
         searchView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
             searchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             searchView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -39,7 +38,8 @@ class SearchVC: UIViewController {
     // Search butonuna tıklandığında çalışacak fonksiyon
     @objc private func didTapSearchButton() {
         guard let userIdString = searchView.searchTextField.text,
-              let userId = Int(userIdString) else {
+              let userId = Int(userIdString)
+        else {
             return
         }
 
@@ -48,7 +48,7 @@ class SearchVC: UIViewController {
             // Kullanıcı verisi geldikten sonra ana thread'de UI'yi güncelliyoruz
             DispatchQueue.main.async {
                 if let user = user {
-                    self?.searchView.userInfoLabel.text = "Name: \(user.name)\nUsername: \(user.username)"
+                    self?.searchView.userInfoLabel.text = "Name: \(user.name)\nUsername: \(user.username)\nEmail: \(user.email)"
                     self?.searchView.userInfoLabel.isHidden = false
                     self?.searchView.showPostsButton.isHidden = false
                 } else {
@@ -61,6 +61,13 @@ class SearchVC: UIViewController {
     }
 
     @objc private func didTapShowPostsButton() {
-        // Post gösterme mantığını burada uygulayabilirsin.
+        guard let userIdString = searchView.searchTextField.text,
+              let userId = Int(userIdString)
+        else {
+            return
+        }
+
+        let postListVC = PostListVC(userId: userId)
+        navigationController?.pushViewController(postListVC, animated: true)
     }
 }
