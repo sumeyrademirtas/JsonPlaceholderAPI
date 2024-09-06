@@ -17,7 +17,7 @@ class PostListViewModel {
     }
     
     func fetchPosts(completion: @escaping () -> Void) {
-        let request = Request(endpoint: .users, pathComponents: ["\(userId)", "posts"])
+        let request = Request(endpoint: .users, pathComponents: ["\(userId)", PhEndPoint.posts.rawValue])
         
         Service.shared.execute(request, expecting: [Post].self) { [weak self] result in
             switch result {
